@@ -4,7 +4,7 @@ $(function (){
   $( document ).ready(function() {
     $( ".hamburger__list" ).hide();
     $( ".hamburger" ).click(function() {
-      $( ".hamburger__list" ).slideToggle( function() {});
+      $( ".hamburger__list" ).slideToggle();
       $('.hamburger__line--one').toggleClass('cross__animation--one');
       $('.hamburger__line--two').toggleClass('cross__animation--two');
       $('.hamburger__line--three').toggleClass('cross__animation--three');      

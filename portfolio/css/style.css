@@ -42,7 +42,7 @@ html {
 }
 .hamburger__list {
   position: fixed;
-  right: 2vw;
+  right: 0;
   top: 8vh;
 }
 .hamburger__list--child {
@@ -50,7 +50,15 @@ html {
   font-size: 1.5rem;
   color: #1e1e1e;
   display: block;
-  padding: 8px 0;
+  padding: 8px 2rem 8px 1rem;
+  background-color: #f5f5f5;
+}
+.hamburger__list--child:hover {
+  opacity: 0.4;
+}
+.hamburger__list--parent {
+  background-color: #f5f5f5;
+  padding-bottom: 100vh;
 }
 
 .cross__animation--one {
@@ -322,6 +330,7 @@ main {
   font-family: "Gothic A1";
   font-size: 1.4rem;
   color: #f5f5f5;
+  line-height: 1.8rem;
 }
 .contact__button {
   margin-top: 8vh;
@@ -356,6 +365,9 @@ footer {
   font-size: 1.5rem;
   margin-right: 3rem;
   margin-top: 2.5vh;
+}
+.footer__nav--child:hover {
+  opacity: 0.4;
 }
 
 .scrollin {

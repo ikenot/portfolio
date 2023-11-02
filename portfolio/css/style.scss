@@ -42,14 +42,23 @@ html {
   }
   &__list {
     position: fixed;
-    right: 2vw;
+    right: 0;
     top: 8vh;
     &--child {
       text-align: center;
       font-size: 1.5rem;
       color: #1e1e1e;
       display: block;   
-      padding:8px 0;
+      padding:8px 2rem 8px 1rem;
+      background-color: #f5f5f5;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+    &--parent {
+        background-color: #f5f5f5;
+        padding-bottom: 100vh;
+
     }
   }
 }
@@ -328,6 +337,7 @@ main {
     font-family: 'Gothic A1';
     font-size: 1.4rem;
     color: #f5f5f5;
+    line-height: 1.8rem;
   }
   &__button {
     margin-top: 8vh;
@@ -362,6 +372,9 @@ footer{
       font-size: 1.5rem;
       margin-right: 3rem;
       margin-top: 2.5vh;
+      &:hover {
+        opacity: 0.4;
+      }
     }
   }
 }
