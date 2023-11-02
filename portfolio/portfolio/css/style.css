@@ -1,0 +1,376 @@
+body {
+  font-family: "Bree Serif", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #1e1e1e;
+  height: 8vh;
+  opacity: 0;
+  transition: all 800ms;
+  z-index: 102;
+}
+.header__logo {
+  position: absolute;
+  height: 6vh;
+  margin-top: 1vh;
+  margin-left: 1vw;
+}
+
+.hamburger {
+  position: fixed;
+}
+.hamburger__line {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 1.5rem;
+  right: 3.5rem;
+}
+.hamburger__line--one, .hamburger__line--two, .hamburger__line--three {
+  width: 2.1rem;
+  height: 1px;
+  background-color: white;
+  margin: 0.25rem 0;
+  transition: 0.3s;
+}
+.hamburger__list {
+  position: fixed;
+  right: 0;
+  top: 8vh;
+}
+.hamburger__list--child {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  display: block;
+  padding: 8px 2rem 8px 1rem;
+  background-color: #f5f5f5;
+}
+.hamburger__list--child:hover {
+  opacity: 0.4;
+}
+.hamburger__list--parent {
+  background-color: #f5f5f5;
+  padding-bottom: 100vh;
+}
+
+.cross__animation--one {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.cross__animation--two {
+  opacity: 0 !important;
+}
+
+.cross__animation--three {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.scrollin__header {
+  opacity: 1;
+}
+
+.main__video {
+  position: relative;
+  overflow: hidden;
+}
+.main__video > video {
+  filter: grayscale(100%);
+  height: 100vh;
+  margin-left: -2vw;
+  position: relative;
+  z-index: 100;
+}
+.main__title {
+  font-size: 6rem;
+  color: #f5f5f5;
+  position: absolute;
+  top: 75vh;
+  left: 60vw;
+  z-index: 101;
+  opacity: 0;
+  transform: translate(0, -80px);
+  transition: all 1200ms;
+}
+.main__title > span {
+  animation: 1s ease-out forwards;
+}
+
+main {
+  background-color: #ffffff;
+  background-size: 100%, 35%, 35%, 85%, 80vw, 35%, 45%, 45.5%, 35%, 70%, 100%;
+  background-image: url(/img/grange2.png), url(/img/concept.png), url(/img/service.png), url(/img/service-grey.png), url(/img/service-grey.png), url(/img/profile.png), url(/img/profile_background.png), url(/img/profile_background.png), url(/img/contact.png), url(/img/black.png), url(/img/background__image.jpeg);
+  background-repeat: repeat-y, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat-y, no-repeat;
+  background-position: center, top 152vh right 15vw, top 250vh left 15vw, top 200vh center, top 307vh right 0, top 440vh left 15vw, top 420vh left 5vw, top 430vh right 5vw, top 500vh right 15vw, center;
+  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, fixed;
+}
+
+.concept__title, .concept__content {
+  font-family: "Yu Mincho";
+  color: #f5f5f5;
+  margin-left: 18vw;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 800ms;
+}
+.concept__title {
+  font-size: 2.5rem;
+  margin-top: 35vh;
+  border-bottom: #f5f5f5 2px solid;
+  display: inline-block;
+}
+.concept__content {
+  font-size: 1.8rem;
+  margin-top: 8vh;
+  line-height: 3rem;
+  margin-bottom: 15vh;
+}
+
+.section__title--line, .section__title--line--product, .section__title--line--profile, .section__title--line--contact {
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+}
+.section__title--line::after, .section__title--line--product::after, .section__title--line--profile::after, .section__title--line--contact::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 0px;
+  background: #f5f5f5;
+  animation: pathmove 1.6s ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 90px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 150px;
+    opacity: 0;
+  }
+}
+.section__title--word, .section__title--word--contact {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.service {
+  margin-top: 50vh;
+  position: relative;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 800ms;
+}
+.service__main {
+  margin-top: 5vh;
+  margin-bottom: 30vh;
+  display: flex;
+  justify-content: center;
+}
+.service__main--down {
+  margin-top: 8vh;
+}
+.service__main--down, .service__main--up {
+  position: relative;
+  margin-left: -0.5rem;
+}
+.service__main--title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.service__main--title--line {
+  display: inline-block;
+  border-bottom: #1e1e1e 1px solid;
+}
+.service__main--hover {
+  font-family: "Yu Mincho";
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #f5f5f5;
+  margin-top: -32vh;
+  margin-left: 0vw;
+  margin-right: 0;
+  background-color: #1e1e1e;
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  opacity: 0;
+  z-index: 90;
+  transition: 0.4s;
+}
+.service__main--hover::after {
+  content: "";
+  width: 14.5rem;
+  height: 1px;
+  background: #f5f5f5;
+  position: absolute;
+  bottom: 1.5rem;
+}
+.service__main--hover::before {
+  content: "";
+  width: 1px;
+  height: 10rem;
+  background: #f5f5f5;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.5rem;
+}
+
+.hover__fade {
+  opacity: 0.9;
+}
+
+.product {
+  margin-top: 60vh;
+  margin-bottom: 20vh;
+  position: relative;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 800ms;
+}
+.product__main {
+  margin-top: 10vh;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+.product__main--carousel {
+  width: 25vw;
+  height: 25vw;
+}
+.product__button {
+  margin-top: 10vh;
+  text-align: center;
+  position: relative;
+}
+.product__button--more {
+  position: relative;
+  font-size: 2.5rem;
+  color: #f5f5f5;
+  background-color: #1e1e1e;
+  padding: 1vh 5vw 1vh 5vw;
+  border-radius: 0.1pc;
+}
+
+.product__button--arrow, .contact__button--arrow {
+  text-align: center;
+}
+.product__button--arrow::after, .contact__button--arrow::after {
+  content: "";
+  width: 5vw;
+  height: 1px;
+  background: #f5f5f5;
+  position: absolute;
+  right: 40%;
+  bottom: 1rem;
+  z-index: 200;
+}
+.product__button--arrow::before, .contact__button--arrow::before {
+  content: "";
+  width: 1px;
+  height: 1rem;
+  background: #f5f5f5;
+  transform: rotate(-60deg);
+  position: absolute;
+  bottom: 0.8rem;
+  right: 40.5%;
+}
+
+.product__button:hover, .contact__button:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.product__button:hover .product__button--arrow, .contact__button:hover .contact__button--arrow {
+  transform: translateX(20px);
+  transition: all 0.5s;
+}
+
+.profile {
+  margin-top: 30vh;
+  margin-bottom: 35vh;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 800ms;
+}
+.profile__main {
+  margin-top: 3.5vh;
+  font-family: "Gothic A1";
+  font-size: 1.4rem;
+  color: #1e1e1e;
+}
+
+.contact {
+  margin-top: 20vh;
+  margin-bottom: 25vh;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translate(0, 80px);
+  transition: all 800ms;
+}
+.contact__main {
+  margin-top: 7vh;
+  font-family: "Gothic A1";
+  font-size: 1.4rem;
+  color: #f5f5f5;
+  line-height: 1.8rem;
+}
+.contact__button {
+  margin-top: 8vh;
+  text-align: center;
+  position: relative;
+}
+.contact__button--more {
+  position: relative;
+  font-size: 2.5rem;
+  color: #f5f5f5;
+  background-color: #1e1e1e;
+  padding: 1vh 4vw 1vh 4vw;
+  border-radius: 0.1pc;
+}
+
+.section__title--word--contact {
+  color: #f5f5f5;
+}
+
+footer {
+  width: 100%;
+  height: 8vh;
+  background-color: #1e1e1e;
+}
+
+.footer__nav {
+  margin-left: 2vw;
+  display: flex;
+}
+.footer__nav--child {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  margin-right: 3rem;
+  margin-top: 2.5vh;
+}
+.footer__nav--child:hover {
+  opacity: 0.4;
+}
+
+.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}/*# sourceMappingURL=style.css.map */
