@@ -45,11 +45,13 @@ $(function (){
     autoplayspeed: 200,
     arrows: true,
     slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
   });
 
   // fadein
   $(window).scroll(function () {
-    $('.main__title, .concept__title, .concept__content, .service, .product, .profile, .contact').each(function () {
+    $('.concept__title, .concept__content, .service, .product, .section__title, .contact').each(function () {
       var targetElement = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -59,5 +61,72 @@ $(function (){
     });
   }) 
 
+  $(window).scroll(function () {
+    var scrolled = $(window).scrollTop();
+    var windowHeight = $(window).height();
   
+    // タイトル要素のアニメーション
+    $('.section__title--profile').each(function () {
+      var targetElement = $(this).offset().top + 100; // 遅延を追加
+      if (scrolled > targetElement - windowHeight && !$(this).hasClass('scrollin')) {
+        $(this).addClass('scrollin').animate({ opacity: 1 }, 500, function() {
+          // タイトル要素のアニメーションが終了したら、次の要素に対してアニメーションを開始
+          // ここで次の要素に対するアニメーションコードを追加
+        });
+      }
+    });
+  
+    // バックグラウンド要素のアニメーション
+    $('.profile__background').each(function () {
+      var targetElement = $(this).offset().top + 200; // 遅延を追加
+      if (scrolled > targetElement - windowHeight && !$(this).hasClass('scrollin')) {
+        $(this).addClass('scrollin').animate({ opacity: 1 }, 500, function() {
+          // バックグラウンド要素のアニメーションが終了したら、次の要素に対してアニメーションを開始
+          // ここで次の要素に対するアニメーションコードを追加
+        });
+      }
+    });
+  
+    // メイン要素のアニメーション
+    $('.profile__main').each(function () {
+      var targetElement = $(this).offset().top + 300; // 遅延を追加
+      if (scrolled > targetElement - windowHeight && !$(this).hasClass('scrollin')) {
+        $(this).addClass('scrollin').animate({ opacity: 1 }, 500, function() {
+          // メイン要素のアニメーションが終了したら、次の要素に対してアニメーションを開始
+          // ここで次の要素に対するアニメーションコードを追加
+        });
+      }
+    });
+  });
+  
+
+  // 画面が読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+  //spanタグを追加する
+  var element = $(".main__title");
+  element.each(function () {
+    var text = $(this).text();
+    var textbox = "";
+    text.split('').forEach(function (t, i) {
+      if (t !== " ") {
+        if (i < 10) {
+          textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+        } else {
+          var n = i / 10;
+          textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+        }
+
+      } else {
+        textbox += t;
+      }
+    });
+    $(this).html(textbox);
+  });
+  // アニメーション用の関数
+  $('.main__title').each(function () {
+    $(this).addClass("appeartext");
+  });
+});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
 })
