@@ -454,4 +454,34 @@ footer {
     opacity: 1;
     transform: translate(0, 0);
   }
+}
+@media screen and (max-width: 1024px) {
+  .main__title {
+    left: 50%;
+  }
+  .concept__title {
+    font-size: 2rem;
+  }
+  .concept__content {
+    font-size: 1.5rem;
+  }
+  .service__main--down, .service__main--up {
+    text-align: center;
+  }
+  .service__main--image {
+    width: 12rem;
+  }
+  .service__main--hover {
+    padding: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-top: -17rem;
+  }
+  .service__main--hover::after, .service__main--hover::before {
+    display: none;
+  }
+  .product__button--arrow, .contact__button--arrow {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

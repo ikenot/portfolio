@@ -451,3 +451,44 @@ footer{
 	100% {opacity:1; transform: translate(0, 0)}
 }
 
+@media screen and (max-width: 1024px){
+  .main {
+    &__title {
+      left: 50%;
+    }
+  }
+  .concept__ {
+    &title {
+      font-size: 2rem;
+    }
+    &content {
+      font-size: 1.5rem;
+    }
+  }
+
+  .service {
+    &__main {
+      &--down, &--up {
+        text-align: center;
+        // margin-left: -4.5rem;
+      }
+      &--image {
+        width: 12rem;
+      } 
+      &--hover {
+        padding: 0;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1rem;
+        margin-top: -17rem;
+        &::after, &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .product__button--arrow, .contact__button--arrow {
+    display: none;
+  }
+}
