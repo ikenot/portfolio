@@ -44,10 +44,23 @@ $(function (){
     infinite: true,
     autoplayspeed: 200,
     arrows: true,
-    slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
+    slidesToShow: 3,
   });
+
+  $(function() {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      $('.product__main').slick({
+        slidesToShow: 1,
+      });
+    } else {
+      $('.product__main').slick({
+        slidesToShow: 3,
+      });
+    };
+  });
+
 
   // fadein
   $(window).scroll(function () {
@@ -88,7 +101,7 @@ $(function (){
     });
   
     // メイン要素のアニメーション
-    $('.profile__main').each(function () {
+    $('.profile__main, .profile__main--sp').each(function () {
       var targetElement = $(this).offset().top + 300; // 遅延を追加
       if (scrolled > targetElement - windowHeight && !$(this).hasClass('scrollin')) {
         $(this).addClass('scrollin').animate({ opacity: 1 }, 500, function() {

@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="via Productのポートフォリオサイト">
- <title>via Product</title>
+ <meta name="description" content="ホームページやLP制作を行っている、via Productのポートフォリオサイトです。お客様に見られるデザイン設計から、検索サイトにも表示されるマーケティングにも注視したサイト作りを行います。英語対応も可。">
+ <title>via Product ホームページやLPのデザインからコーディングまで制作承ります。英語対応も可。</title>
  <link rel="stylesheet" href="css/reset.css">
  <link rel="stylesheet" href="css/style.css">
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,8 @@
 
 <body>
   <main>
+    <div class="index__background">
+
     <header>
       <div class="header">
         <a href="#"><img class="header__logo" src="img/logo.png"></a>
@@ -43,6 +45,7 @@
       </div>
     </header>
     
+
     <section id="main">
       <div class="main__video">
         <video src="img/main__video.mp4" autoplay loop muted playsinline></video>
@@ -52,10 +55,15 @@
     
 
     <section id="concept">
-      <div class="concept__background"></div>
-      <h2 class="concept__title">一期一会を創る…</h2>
-      <h3 class="concept__content">あなたが心を込めて作る、モノ・サービスを<br>出会うべきお客様の元へ届けるお手伝い</h3>
-    </section>
+      <div class="concept__background">
+        <h2 class="concept__title">一期一会を創る…</h2>
+        <h3 class="concept__content">あなたが心を込めて作る、モノ・サービスを<br>出会うべきお客様の元へ届けるお手伝い</h3>
+      </div>
+      <div class="concept__background--sp">
+        <h2 class="concept__title">一期一会を創る…</h2>
+        <h3 class="concept__content">あなたが心を込めて作る、<br>モノ・サービスを<br>出会うべきお客様の元へ<br>届けるお手伝い</h3>
+      </div>
+      </section>
 
     <section id="service">
       <div class="service">
@@ -111,14 +119,13 @@
           <div class="section__title--word">product</div>
         </div>
         <div class="product__main">
-          <!-- imgとaltの挿入 -->
-          <div><img class="product__main--carousel" src="img/sample.jpeg" alt="the production of  site"></div>
-          <div><img class="product__main--carousel" src="img/black.png" alt="the production of  site"></div>
-          <div><img class="product__main--carousel" src="img/logo.png" alt="the production of  site"></div>
-          <div><img class="product__main--carousel" src="img/logo.png" alt="the production of  site"></div>
+          <div><a href=""><img class="product__main--carousel" src="img/product/bicycle.png" alt="the production of bicycle site"></a></div>
+          <div><a href=""><img class="product__main--carousel" src="img/product/photobook.png" alt="the production of photobook site"></a></div>
+          <div><a href=""><img class="product__main--carousel" src="img/product/seitai.png" alt="the production of seitai site"></a></div>
+          <div><a href=""><img class="product__main--carousel" src="img/product/wagashi.png" alt="the production of wagashi site"></a></div>
         </div>
         <div class="product__button">
-          <a class="product__button--more" href="/product-page">more</a>
+          <a class="product__button--more" href="/product.html">more</a>
           <div class="product__button--arrow"></div>
         </div>
       </div>
@@ -137,6 +144,10 @@
         <div class="profile__main">
           <p class="profile__main--word">アフリカでのボランティアや一般企業での勤務、<br>料理人修行、独立開業から事業売却を経験</p><br>
           <p class="profile__main--word">息子の誕生と、妻の海外駐在をきっかけに<br>Webエンジニアとして活動を開始</p>
+        </div>
+        <div class="profile__main--sp">
+          <p class="profile__main--word">アフリカでのボランティアや<br>一般企業での勤務、<br>料理人修行、独立開業から<br>事業売却を経験</p><br>
+          <p class="profile__main--word">息子の誕生と、<br>妻の海外駐在をきっかけに<br>Webエンジニアとして活動を開始</p>
         </div>
       </div>
     </section>
@@ -166,6 +177,7 @@
         <div class="footer__nav--child"><a href="#contact">contact</a></div>
       </div>
     </footer>
+    </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
